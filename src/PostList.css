@@ -1,4 +1,6 @@
-.PostList {
+.postList {
+  width: 800px;
+  margin: 50px auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

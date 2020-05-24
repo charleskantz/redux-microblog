@@ -35,10 +35,12 @@ function CommentList({ postId, comments }) {
   }
 
   return (
-    <div className="postCommentContainer">
-      <h4>Comments</h4>
-      {renderComments()}
-      <CommentForm addComment={addNewComment} />
+    <div className="postCommentWrapper">
+      <div className="postCommentContainer" >
+        <h3>Comments</h3>
+        <CommentForm addComment={addNewComment} />
+        {renderComments()}
+      </div>
     </div>
   )
 }

@@ -10,9 +10,12 @@ function Votes({ voteCount, postId }) {
 
   return (
     <div className="votesContainer" >
-        <i className="fa fa-thumbs-down down" onClick={() => dispatch(changeVoteAPI(id, "down"))} ></i>
-      {voteCount} Votes
-        <i className="fa fa-thumbs-up up" onClick={() => dispatch(changeVoteAPI(id, "up"))} ></i>
+      <div className="votesButton" onClick={() => dispatch(changeVoteAPI(id, "up"))}>
+        <i className="fa fa-hand-peace-o"></i>
+      </div>
+      <div className="votesCount">
+        {voteCount} Votes
+      </div>
     </div>
   )
 }

@@ -24,13 +24,14 @@ function PostList() {
         id={t.id} 
         title={t.title} 
         description={t.description}
+        photoUrl={t.photo_url}
         votes={t.votes}
       />
     ));
   }
 
   return (
-    <div className="PostList">
+    <div className="postList">
       {renderPostListItems()}
     </div>
   )

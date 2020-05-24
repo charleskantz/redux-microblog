@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory, Link } from 'react-router-dom';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import { getPostAPI, deletePostAPI } from './actions';
+import './PostPage.css';
 
 import PostForm from './PostForm';
 import CommentList from './CommentList';
@@ -49,7 +50,9 @@ function PostPage() {
   *****************************************************************************************/
  // if (!post) { return <Redirect to="/" />; }
 
-  const { title, description, body, comments, votes } = post;
+ const DEFAULT_IMG = 'https://www.linux.com/wp-content/uploads/2019/08/minimal_0.jpg'
+
+  const { title, description, body, comments, votes, photo_url } = post;
 
   const postBody = editMode 
     ? <PostForm 
@@ -57,9 +60,18 @@ function PostPage() {
         formData={post} 
         toggleEditMode={toggleEditMode} 
       /> 
-    : (<div>
-        <h3>{title}</h3>
-        <p>{description}</p>
+    : (<div className="postBody">
+        <img
+          src={photo_url ? photo_url : DEFAULT_IMG}
+          alt={`${title}`}
+          className="postBodyImg"
+        />
+        <h1>{title}</h1>
+        <h3>{description}</h3>
+        <div className="postCommentUserInfo" >
+          <div className="postCommentFormAvatar" ></div>
+          <div className="postCommentUsername" >Anonymous User</div>
+        </div>
         <p>{body}</p>
       </div>);
 
@@ -73,14 +85,15 @@ function PostPage() {
   }
 
   return (
-    <div className="PostPage">
-      <div>
-        <button onClick={toggleEditMode}>Edit</button>
-        <button onClick={() => deletePost(parseInt(id))}>Delete</button>
-      </div>
-      <div><Votes voteCount={votes} postId={id} /></div>
+    <div className="postPage">
       {postBody}
-      <hr />
+      <div className="postPageOptions">
+        <Votes voteCount={votes} postId={id} />
+        <div>
+          <Link className="postOptions" onClick={toggleEditMode}>Edit</Link>
+          <Link className="postOptions postDanger" onClick={() => deletePost(parseInt(id))}>Delete</Link>
+        </div>
+      </div>
       <CommentList postId={id} comments={comments} />
     </div>
   )

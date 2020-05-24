@@ -12,8 +12,17 @@ import './Comment.css';
 function Comment({ message, removeComment, id }) {
 
   return (
-    <div className="comment">
-      <i className="fa fa-window-close commentDelete" onClick={() => removeComment(id)} ></i>{message}
+    <div className="commentCard">
+       <div className="postCommentUserInfo" >
+        <div className="postCommentFormAvatar" ></div>
+        <div className="postCommentUsername" >Anonymous User</div>
+      </div>
+      <div className="commentBody" >
+        {message}
+      </div>
+      <div className="commentFooter">
+        <i className="fa fa-window-close commentDelete" onClick={() => removeComment(id)} ></i>
+      </div>
     </div>
   )
 

@@ -1,0 +1,31 @@
+.postPage {
+  width: 680px;
+  margin: 0 auto;
+}
+
+.postPageOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.postBodyImg {
+  width: 680px;
+}
+
+.postOptions {
+  border: 1px solid rgba(0,0,0,.54);
+  border-radius: 4px;
+  padding: 6px 14px 4px;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: none;
+  color: rgba(0,0,0,.54);
+  margin-left: 10px;
+}
+
+.postDanger {
+  border: 1px solid rgba(255, 68, 35, 0.543);
+  color: rgba(255, 68, 35, 0.543);
+}

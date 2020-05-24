@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './CommentForm.css';
 
 /** Displays a form to add a new comment to a post
  * 
@@ -24,15 +25,25 @@ function CommentForm({ addComment }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} >
-      <input
-        name="newMessage"
-        placeholder="New message"
-        value={message}
-        onChange={handleChange}
-      />
-      <button>Add</button>
-    </form>
+    <div className="commentCard" >
+      <div className="postCommentUserInfo" >
+        <div className="postCommentFormAvatar" ></div>
+        <div className="postCommentUsername" >Anonymous User</div>
+      </div>
+
+      <form onSubmit={handleSubmit} >
+        <textarea
+          name="newMessage"
+          placeholder="sdfddfsdfsdf sdfddfsdfsdf sdfddfsdfsdf sdfddfsdfsdf sdfddfsdfsdf sdfddfsdfsdf"
+          value={message}
+          onChange={handleChange}
+          className="postCommentFormTextArea"
+          rows="1"
+          cols="90"
+        ></textarea><br />
+        <button className="postCommentSubmit">Publish</button>
+      </form>
+    </div>
   )
 }
 

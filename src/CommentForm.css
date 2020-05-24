@@ -1,0 +1,46 @@
+.postCommentFormAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-image: url('https://miro.medium.com/max/720/1*W35QUSvGpcLuxPo3SRTH4w.png');
+  background-position: center;
+  background-size: 200%;
+  float: left;
+}
+
+.postCommentFormTextArea {
+  display: block;
+  border: none;
+  font-size: 16px;
+  color: rgba(0,0,0,.84);
+  font-family: 'Martel', 'Source Serif Pro', serif;
+}
+
+.postCommentSubmit {
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+  border: 1px solid #1CAA81;
+  font-size: 13px;
+  color: #1CAA81;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.postCommentUsername {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 36px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #1CAA81;
+  padding: 10px 0;
+  margin-left: 12px;
+}
+
+.postCommentUserInfo {
+  display: block;
+}
+
+.postCommentTextArea {
+
+}

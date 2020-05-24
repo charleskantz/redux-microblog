@@ -1,17 +1,27 @@
 .votesContainer {
-  padding: 10px;
-  background-color: #F5F5F5;
+  display: inline;
   border-radius: 4px;
-  max-width: 100px;
-  margin: 10px auto;
+  max-width: 200px;
 }
 
-.up {
-  color: forestgreen;
-  margin-left: 4px;
+.votesButton {
+  border: 1px solid rgba(0, 0, 0, .84);
+  border-radius: 50%;
+  height: 58px;
+  width: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, .84);
+  font-size: 24px;
+  float: left;
+  background-color: white;
+  cursor: pointer;
 }
 
-.down {
-  color: maroon;
-  margin-right: 4px;
+.votesCount {
+  box-sizing: content-box;
+  display: inline-block;
+  margin-left: 15px;
+  padding: 14px 0;
 }

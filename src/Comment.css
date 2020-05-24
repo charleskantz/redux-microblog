@@ -1,6 +1,19 @@
-.comment {
-  margin: 8px 0;
+.commentCard {
+  background-color: white;
+  width: 640px;
+  margin: 20px 0;
+  padding: 20px;
   text-align: left;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+  border: 1px solid rgba(0,0,0,.09);
+  border-radius: 3px;
+}
+
+.commentBody {
+  font-size: 12pt;
+  line-height: 1.8em;
+  margin: 10px 0;
+  color: rgba(0,0,0,.84)
 }
 
 .commentDelete {

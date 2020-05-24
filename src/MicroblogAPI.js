@@ -5,6 +5,7 @@ class MicroBlogAPI {
   static async getTitles() {
     try {
       const results = await axios.get(BASE_URL);
+      console.log("TITLE RESULTS", results)
       return results.data;
     } catch (err) {
       console.error(err);
