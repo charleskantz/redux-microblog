@@ -1,0 +1,38 @@
+.postFormContainer {
+  margin: 0 auto;
+  width: 600px;
+}
+
+textarea {
+  height: 60px;
+  width: 600px;
+  border: none;
+  color: rgba(0, 0, 0, 0.84);
+}
+
+textarea :focus {
+  border: none;
+  color: white;
+}
+
+#title {
+  font-family: 'Source Serif Pro', sans-serif;
+  font-size: 38px;
+}
+
+#description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.17em;
+  letter-spacing: .02em;
+}
+
+#body {
+  font-family: 'Martel', serif;
+  font-size: 18px;
+  letter-spacing: .01em;
+  line-height: 1.9em;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}

@@ -5,7 +5,7 @@
 }
 
 .headerNav {
-  width: 1072px;
+  width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -13,15 +13,17 @@
   justify-content: space-between;
 }
 
-.logo {
-  font-family: 'Source Serif Pro', serif;
-  font-size: 28px;
-}
-
 .Header a {
   margin: 15px;
   font-size: 14px;
   text-decoration: none;
+  color: rgba(0,0,0,.84);
+}
+
+.logo a {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 28px;
+  text-decoration: none !important;
   color: rgba(0,0,0,.84);
 }
 

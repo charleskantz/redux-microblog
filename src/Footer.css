@@ -7,19 +7,19 @@
 }
 
 .footerContainer {
-  width: 1072px;
+  width: 800px;
   margin: 0 auto;
 }
 
 .footerHr {
   display: inline-block;
   border-bottom: 1px solid rgba(255, 255, 255, 0.54);
-  width: 1072px;
+  width: 800px;
   margin: 30px auto;
 }
 
 .footerNav {
-  width: 1072px;
+  width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
