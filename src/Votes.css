@@ -19,6 +19,11 @@
   cursor: pointer;
 }
 
+.votesButton:hover {
+  color: black;
+  border: 1px solid black;
+}
+
 .votesCount {
   box-sizing: content-box;
   display: inline-block;

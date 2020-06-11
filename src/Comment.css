@@ -17,6 +17,10 @@
 }
 
 .commentDelete {
-  margin-right: 8px;
-  color: maroon;
+  color: lightgray;
+}
+
+.postCommentHeader {
+  display: flex;
+  justify-content: space-between;
 }

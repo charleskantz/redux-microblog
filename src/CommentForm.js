@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import './CommentForm.css';
+import TextareaAutosize from 'react-textarea-autosize';
+
 
 /** Displays a form to add a new comment to a post
- * 
+ *
  * Props:
  *    addComment -> parent function that dispatches addComment action
- * 
+ *
  * State:
  *    message -> current input data
  */
@@ -32,15 +34,13 @@ function CommentForm({ addComment }) {
       </div>
 
       <form onSubmit={handleSubmit} >
-        <textarea
+        <TextareaAutosize
           name="newMessage"
-          placeholder="sdfddfsdfsdf sdfddfsdfsdf sdfddfsdfsdf sdfddfsdfsdf sdfddfsdfsdf sdfddfsdfsdf"
+          placeholder="Write a response..."
           value={message}
           onChange={handleChange}
           className="postCommentFormTextArea"
-          rows="1"
-          cols="90"
-        ></textarea><br />
+        ></TextareaAutosize><br />
         <button className="postCommentSubmit">Publish</button>
       </form>
     </div>

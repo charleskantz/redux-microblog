@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useHistory, Link } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import { getPostAPI, deletePostAPI } from './actions';
 import './PostPage.css';
@@ -73,12 +73,12 @@ function PostPage() {
           <div className="postPageOptions">
           <Votes voteCount={votes} postId={id} />
           <div>
-            <Link className="postOptions" onClick={toggleEditMode}>Edit</Link>
-            <Link className="postOptions postDanger" onClick={() => deletePost(parseInt(id))}>Delete</Link>
+            <div className="postOptions" onClick={toggleEditMode}>Edit</div>
+            <div className="postOptions postDanger" onClick={() => deletePost(parseInt(id))}>Delete</div>
           </div>
         </div>
-        <CommentList postId={id} comments={comments} />
         </div>
+        <CommentList postId={id} comments={comments} />
       </>
     );
 
@@ -92,9 +92,9 @@ function PostPage() {
   }
 
   return (
-    <div className="postPage">
+    <>
       {postBody}
-    </div>
+    </>
   )
 }
 

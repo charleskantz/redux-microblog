@@ -81,7 +81,7 @@ function rootReducer(state = INITIAL_STATE, action) {
             }
           ]
         }
-  
+
       case EDIT_POST:
         const titlesToEdit = [...state.titles];
         let editedTitle = titlesToEdit.find(t => t.id === action.post.id);
@@ -151,11 +151,8 @@ function rootReducer(state = INITIAL_STATE, action) {
       };
 
       case CHANGE_VOTE:
-        // console.log("CHANGE VOTE REDUCER - votes:", action.votes, "POSTID:", action.postId)
         const titlesCopy = [...state.titles];
-        // console.log("TITLES COPY", titlesCopy)
         const newTitle = titlesCopy.find(t => t.id === action.postId);
-        // console.log("NEW TITLE", newTitle);
         newTitle.votes = action.votes;
         titlesCopy.sort((a,b) => b.votes - a.votes);
         return {
@@ -169,18 +166,6 @@ function rootReducer(state = INITIAL_STATE, action) {
           },
           titles: titlesCopy
         }
-
-    // case START_LOAD:
-    //   return {
-    //     ...state,
-    //     isLoading: true
-    //   }
-
-    // case END_LOAD:
-    //   return {
-    //     ...state,
-    //     isLoading: false
-    //   }
 
     default:
       return state;

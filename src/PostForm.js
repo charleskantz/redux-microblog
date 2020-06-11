@@ -55,7 +55,12 @@ function PostForm({ id, formData = INITIAL_STATE, toggleEditMode }) {
   return (
     <div className="postFormContainer">
       <form onSubmit={handleSubmit}>
-        <p>
+      <button className="postBtn postSaveBtn">Save</button>
+        {id
+          ? <button className="postBtn postCancelBtn" onClick={toggleEditMode}>Cancel</button>
+          : <Link to="/">Cancel</Link>
+        }
+        <div>
           <TextareaAutosize
             name="title"
             id="title"
@@ -64,9 +69,9 @@ function PostForm({ id, formData = INITIAL_STATE, toggleEditMode }) {
             placeholder="Title"
           >
           </TextareaAutosize>
-        </p>
+        </div>
 
-        <p>
+        <div>
           <TextareaAutosize
             name="description"
             id="description"
@@ -74,10 +79,10 @@ function PostForm({ id, formData = INITIAL_STATE, toggleEditMode }) {
             onChange={handleChange}
             placeholder="Description"
           >
-            </TextareaAutosize>
-        </p>
+          </TextareaAutosize>
+        </div>
 
-        <p>
+        <div>
           <TextareaAutosize
             name="body"
             id="body"
@@ -86,13 +91,7 @@ function PostForm({ id, formData = INITIAL_STATE, toggleEditMode }) {
             placeholder="Tell your story..."
           >
           </TextareaAutosize>
-        </p>
-
-        <button>Save</button>
-        {id
-          ? <button onClick={toggleEditMode}>Cancel</button>
-          : <Link to="/">Cancel</Link>
-        }
+        </div>
       </form>
     </div>
   )

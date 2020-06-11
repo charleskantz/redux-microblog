@@ -17,19 +17,23 @@
   margin: 15px;
   font-size: 14px;
   text-decoration: none;
-  color: rgba(0,0,0,.84);
+  color: rgba(0,0,0,.8);
 }
 
 .logo a {
   font-family: 'Source Serif Pro', serif;
   font-size: 28px;
   text-decoration: none !important;
-  color: rgba(0,0,0,.84);
+  color: rgba(0,0,0,.8);
 }
 
 .linkAddPost {
-  border: 1px solid rgba(0,0,0,.54);
+  border: 1px solid rgba(0,0,0,.5);
   border-radius: 4px;
   padding: 6px 14px 4px;
   cursor: pointer;
+}
+
+.headerNav a:hover {
+  color: black;
 }

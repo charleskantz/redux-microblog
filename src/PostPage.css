@@ -1,4 +1,4 @@
-.postPage {
+.postBody {
   width: 680px;
   margin: 0 auto;
 }
@@ -15,6 +15,7 @@
 }
 
 .postOptions {
+  display: inline;
   border: 1px solid rgba(0,0,0,.54);
   border-radius: 4px;
   padding: 6px 14px 4px;
@@ -25,7 +26,17 @@
   margin-left: 10px;
 }
 
+.postOptions:hover {
+  color: black;
+  border: 1px solid black;
+}
+
 .postDanger {
-  border: 1px solid rgba(255, 68, 35, 0.543);
-  color: rgba(255, 68, 35, 0.543);
+  border: 1px solid rgba(255, 68, 35, 0.5);
+  color: rgba(255, 68, 35, 0.5);
+}
+
+.postDanger:hover {
+  border: 1px solid rgba(255, 68, 35, 0.8);
+  color: rgba(255, 68, 35, 0.8);
 }

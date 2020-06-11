@@ -1,13 +1,14 @@
 .postFormContainer {
   margin: 0 auto;
-  width: 600px;
+  width: 680px;
 }
 
 textarea {
   height: 60px;
-  width: 600px;
+  width: 680px;
   border: none;
   color: rgba(0, 0, 0, 0.84);
+  resize: none;
 }
 
 textarea :focus {
@@ -35,4 +36,33 @@ textarea :focus {
 
 textarea:focus, input:focus{
   outline: none;
+}
+
+.postBtn {
+  border: 1px solid rgba(0,0,0,.54);
+  border-radius: 4px;
+  padding: 6px 14px 4px;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: none;
+  color: rgba(0,0,0,.54);
+  margin: 0 10px 20px 0;
+  background-color: white;
+  font-family: 'Martel', serif;
+  font-size: 14px;
+}
+
+.postBtn:hover {
+  color: black;
+  border: 1px solid black;
+}
+
+.postSaveBtn {
+  color: rgb(28, 170, 129);
+  border: 1px solid #1CAA81;
+}
+
+.postSaveBtn:hover {
+  color: rgb(0, 126, 90);
+  border: 1px solid rgb(0, 126, 90);
 }

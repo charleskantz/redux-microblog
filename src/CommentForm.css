@@ -2,7 +2,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-image: url('https://miro.medium.com/max/720/1*W35QUSvGpcLuxPo3SRTH4w.png');
+  background-image: url('https://i.imgur.com/weLyjNz.png');
   background-position: center;
   background-size: 200%;
   float: left;
@@ -14,6 +14,8 @@
   font-size: 16px;
   color: rgba(0,0,0,.84);
   font-family: 'Martel', 'Source Serif Pro', serif;
+  margin-top: 16px;
+  width: 640px;
 }
 
 .postCommentSubmit {
@@ -24,6 +26,12 @@
   color: #1CAA81;
   padding: 8px 16px;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.postCommentSubmit:hover {
+  border: 1px solid rgb(25, 125, 97);
+  color: rgb(25, 125, 97);
 }
 
 .postCommentUsername {

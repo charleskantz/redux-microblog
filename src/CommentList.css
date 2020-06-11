@@ -1,10 +1,14 @@
 .postCommentWrapper {
   background-color: #fafafa;
-  margin: 50px 0;
+  margin: 50px 0 0;
+  padding: 50px 0;
 }
 
 .postCommentContainer {
   width: 680px;
   margin: 0 auto;
-  padding-top: 12px;
+}
+
+.postCommentContainer h3 {
+margin-top: 0;
 }

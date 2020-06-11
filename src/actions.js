@@ -78,7 +78,7 @@ function editPost(post) {
 // Delete Post Thunk
 export function deletePostAPI(postId) {
   return async function(dispatch) {
-    let result = await MicroBlogAPI.deletePost(postId);
+    await MicroBlogAPI.deletePost(postId);
     dispatch(deletePost(postId));
   };
 }

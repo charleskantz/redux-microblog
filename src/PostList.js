@@ -4,8 +4,8 @@ import './PostList.css';
 
 import PostListItem from './PostListItem';
 
-/** Displays a list of titles as PostListItem components 
- * 
+/** Displays a list of titles as PostListItem components
+ *
  * Redux:
  *    titles -> title objects representing each post
 */
@@ -16,13 +16,11 @@ function PostList() {
 
   function renderPostListItems() {
 
-    console.log("RENDERED THE LIST!")
-
-    return titles.map(t => ( 
-      <PostListItem 
-        key={t.id} 
-        id={t.id} 
-        title={t.title} 
+    return titles.map(t => (
+      <PostListItem
+        key={t.id}
+        id={t.id}
+        title={t.title}
         description={t.description}
         photoUrl={t.photo_url}
         votes={t.votes}

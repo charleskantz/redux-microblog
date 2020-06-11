@@ -5,7 +5,6 @@ class MicroBlogAPI {
   static async getTitles() {
     try {
       const results = await axios.get(BASE_URL);
-      console.log("TITLE RESULTS", results)
       return results.data;
     } catch (err) {
       console.error(err);
@@ -18,15 +17,14 @@ class MicroBlogAPI {
       const results = await axios.get(
         `${BASE_URL}/${postId}`
       );
-      if ( !results.data ) { 
-        console.log()
+      if ( !results.data ) {
         throw new Error("404 Not found.")}
       return results.data;
     } catch (err) {
       console.error(err);
     }
   }
-    
+
   // create a post
   static async createPost(post) {
     try {
@@ -34,17 +32,15 @@ class MicroBlogAPI {
         `${BASE_URL}`,
         post
         );
-      console.log("\n \n RESULTS AFTER POST REQUEST\n", results);
       return results.data;
     } catch (err) {
       console.error(err);
     }
   }
-  
+
   // edit a post
   static async editPost(post) {
     try {
-      // console.log("\n\n\n POST!\n", post, "\n\nPOSTID\n", postId);
       const results = await axios.put(
         `${BASE_URL}/${post.id}`,
         post
