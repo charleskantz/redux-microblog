@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL = 'https://ck-microblog.herokuapp.com/api/posts/';
+const BASE_URL = 'https://ck-microblog.herokuapp.com/api/posts';
 
 class MicroBlogAPI {
   static async getTitles() {
