@@ -12,19 +12,9 @@ const store = createStore(
   rootReducer,
   compose(
     applyMiddleware(thunk),
-    window.navigator.userAgent.includes('Chrome') ?
-      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() : compose,
+    window.__REDUX_DEVTOOLS_EXTENSION__?window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
   ),
 );
-
-// const store = createStore(
-//   rootReducer,
-//   compose(
-//     applyMiddleware(thunk),
-//     window.__REDUX_DEVTOOLS_EXTENSION__
-//     && window.__REDUX_DEVTOOLS_EXTENSION__()
-//   )
-// );
 
 ReactDOM.render(
   <React.StrictMode>
